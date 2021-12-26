@@ -68,7 +68,7 @@ Este repositório é composto pelo projeto desenvolvido ao longo do do **capítu
 A aplicação foi desenvolvida utilizando o **Next-Auth** para permitir o login do usuário que devidamente autenticado poderá assinar a newsletter. Ao clicar no botão de assinar o usuário é levado para a página do **Stripe** que gerenciará a forma de pagamento, informando em seguida se a assinatura e pagamento foram realizados com sucesso para a liberação do conteúdo assinado.
 
 ## Conteúdo disponível apenas para assinantes
-  ![signin](https://res.cloudinary.com/dloadb2bx/image/upload/v1640541608/IgnewsFinal_mddoov.gif)
+  ![signin](https://res.cloudinary.com/dloadb2bx/image/upload/v1640542125/IgnewsFinal_rmhcn0.gif)
 
 Utilizando-se do **Stripe** e do **FaunaDB** a aplicação é capaz de identificar os usuários que estão logados, bem como aqueles que possuem uma assinatura válida para acessarem o conteúdo em sua integralidade. 
 
