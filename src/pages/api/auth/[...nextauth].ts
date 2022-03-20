@@ -5,6 +5,7 @@ import { fauna } from '../../../services/fauna'
 
 
 export default NextAuth({
+  secret: process.env.SECRET,
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_CLIENT_ID,
@@ -40,7 +41,7 @@ export default NextAuth({
               ),
             ]),
           ),
-        );  
+        );
         return {
           ...session,
           activeSubscription: userActiveSubscription
@@ -54,7 +55,7 @@ export default NextAuth({
     },
     async signIn({ user }) {
       const { email } = user
-      
+
       try{
         await fauna.query(
           q.If(
@@ -77,7 +78,7 @@ export default NextAuth({
               )
             )
           )
-        )    
+        )
         return true
       } catch {
         return false
