@@ -1,5 +1,7 @@
 import Head from "next/head";
 import { getPrismicClient } from "../../services/prismic";
+
+
 import styles from "./styles.module.scss";
 import Prismic from "@prismicio/client"
 import { GetStaticProps } from "next";
@@ -19,7 +21,7 @@ interface PostsProps {
 }
 
 export default function Posts({ posts }: PostsProps) {
-  const url = process.env.POST_URL
+  // const url = process.env.POST_URL
   return (
     <>
       <Head>
@@ -28,7 +30,7 @@ export default function Posts({ posts }: PostsProps) {
       <main className={styles.container}>
         <div className={styles.posts}>
           {posts.map(post => (
-            <Link href={`${url}/posts/preview/${post.slug}`} key={ post.slug }>
+            <Link href={`posts/preview/${post.slug}`} key={ post.slug }>
               <a>
                 <time>{post.updatedAt}</time>
                 <strong>{post.title}</strong>
